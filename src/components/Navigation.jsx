@@ -3,12 +3,13 @@ import { Logo } from './Logo'
 import { useState } from 'react'
 
 export const Navigation = () => {
-  const [click, setClick] = useState(true)
+  const [click, setClick] = useState(false)
 
   return (
     <Section>
       <NabBar>
         <Logo />
+        <HamburgerMenu $clicks={click} onClick={() => setClick(!click)} />
         <Menu $clicks={click} >
           <MenuItem>
             Home
@@ -87,6 +88,36 @@ const MenuItem = styled.li`
       }
 
     }
+
+`
+
+const HamburgerMenu = styled.span`
+  width: ${({$clicks}) => $clicks ? '2rem' : '1.5rem'};
+  height: 2px;
+  background: ${({theme}) => theme.text};
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: ${({$clicks}) => $clicks ? 'translateX(-50%) rotate(90deg)' : 'translateX(-50%) rotate(0)'};
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  @media screen and (max-width: 64em){
+    display: flex;
+  }
+
+  &::after, &::before{
+    content: "";
+    width: ${({$clicks}) => $clicks ? '1rem' : '1.5rem'};
+    height: 2px;
+    right: ${({$clicks}) => $clicks ? '-2px' : '0'};
+    background: ${({theme}) => theme.text};
+    position: absolute;
+    transition: all .3s ease;
+  }
 
 `
 
