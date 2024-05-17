@@ -1,7 +1,9 @@
-import React from 'react'
+import { Navigation } from '../components/Navigation'
 
 export const MenuPrincipal = () => {
   return (
-    <div>MenuPrincipal</div>
+    <main>
+      <Navigation />
+    </main>
   )
 }
