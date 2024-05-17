@@ -1,7 +1,14 @@
-import React from 'react'
+import styled from 'styled-components'
 
 export const Navigation = () => {
   return (
-    <div>Navigation</div>
+    <Section>
+      Hola
+    </Section>
   )
 }
+
+const Section = styled.section`
+  width: 100vw;
+  background-color: ${({theme}) => theme.body};
+`
