@@ -119,5 +119,15 @@ const HamburgerMenu = styled.span`
     transition: all .3s ease;
   }
 
+  &::after{
+    top: ${({$clicks}) => $clicks ? '0.3rem' : '0.5rem'};
+    transform: ${({$clicks}) => $clicks ? 'rotate(-40deg)' : 'rotate(0)'};
+  }
+
+  &::before{
+    bottom: ${({$clicks}) => $clicks ? '.3rem' : '.5rem'};
+    transform: ${({$clicks}) => $clicks ? 'rotate(40deg)' : 'rotate(0)'};
+  }
+
 `
 
