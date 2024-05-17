@@ -3,14 +3,13 @@ import { Logo } from './Logo'
 import { useState } from 'react'
 
 export const Navigation = () => {
-
   const [click, setClick] = useState(true)
 
   return (
     <Section>
       <NabBar>
         <Logo />
-        <Menu >
+        <Menu $clicks={click} >
           <MenuItem>
             Home
           </MenuItem>
@@ -49,6 +48,12 @@ const Menu = styled.ul`
     bottom: 0;
     width: 100vw;
     background-color: ${({theme}) => `rgba(${theme.bodyRgba}, 0.85)`};
+    backdrop-filter : blur(2px);
+    transform : ${(props) => props.$clicks ? 'translateY(0)' : 'translateY(1000%)'};
+    transition : all .3s  ease;
+    flex-direction : column;
+    justify-content : center;
+    touch-action : none;
 
   }
 `
@@ -71,6 +76,16 @@ const MenuItem = styled.li`
       &::after{
         width: 100%;
       }
+    }
+
+    @media screen and (max-width: 64em) {
+      margin: 1rem 0;
+      font-size: ${({theme}) => theme.fontmd};
+
+      &::after{
+        display: none;
+      }
+
     }
 
 `
