@@ -5,14 +5,28 @@ import { useState } from 'react'
 export const Navigation = () => {
   const [click, setClick] = useState(false)
 
+  const scrollTo = (id) => {
+    let element = document.getElementById(id)
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    })
+
+    setClick(!click)
+  }
+
   return (
-    <Section>
+    <Section id='navigate'>
       <NabBar>
         <Logo />
         <HamburgerMenu $clicks={click} onClick={() => setClick(!click)} />
         <Menu $clicks={click} >
-          <MenuItem>
+          <MenuItem onClick={() => scrollTo('home')} >
             Home
+          </MenuItem>
+          <MenuItem onClick={() => scrollTo('about')} >
+            Acerca de
           </MenuItem>
         </Menu>
       </NabBar>
