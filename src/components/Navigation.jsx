@@ -62,6 +62,7 @@ const Menu = styled.ul`
     right: 0;
     bottom: 0;
     width: 100vw;
+    z-index: 100;
     background-color: ${({theme}) => `rgba(${theme.bodyRgba}, 0.85)`};
     backdrop-filter : blur(2px);
     transform : ${(props) => props.$clicks ? 'translateY(0)' : 'translateY(1000%)'};
