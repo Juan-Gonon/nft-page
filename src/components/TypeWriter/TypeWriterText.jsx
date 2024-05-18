@@ -28,7 +28,7 @@ export const TypeWriterText = () => {
         React es cool 💙
       </SubTitle>
       <ButtonContainer>
-        <Button text='Explorar curso' />
+        <Button text='Explorar curso' link='#' />
       </ButtonContainer>
     </>
   )
