@@ -111,7 +111,7 @@ const HamburgerMenu = styled.span`
   height: 2px;
   background: ${({theme}) => theme.text};
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   left: 50%;
   transform: ${({$clicks}) => $clicks ? 'translateX(-50%) rotate(90deg)' : 'translateX(-50%) rotate(0)'};
   display: none;
