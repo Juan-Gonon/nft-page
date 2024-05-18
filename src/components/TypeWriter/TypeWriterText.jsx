@@ -7,9 +7,11 @@ export const TypeWriterText = () => {
       Aprende React creando proyectos
       <Typewriter
         options={{
-          strings: ['Hello', 'World'],
           autoStart: true,
           loop: true
+        }}
+        onInit={(typewriter) => {
+          typewriter.typeString('<span className="text-1"> Divertidos </span>').pauseFor(500).deleteAll().start()
         }}
       />
     </Title>
