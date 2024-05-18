@@ -1,27 +1,36 @@
 import styled from 'styled-components'
 import Typewriter from 'typewriter-effect'
+import { Button } from '../Buttons/Button'
 
 export const TypeWriterText = () => {
   return (
-    <Title>
-      Aprende React creando proyectos
-      <Typewriter
-        options={{
-          autoStart: true,
-          loop: true
-        }}
-        onInit={(typewriter) => {
-          typewriter
-            .typeString('<span class="text-1"> Divertidos </span>')
-            .pauseFor(500).deleteAll()
-            .typeString('<span class="text-2"> Increíbles </span>')
-            .pauseFor(500).deleteAll()
-            .typeString('<span class="text-3"> Reutilizase </span>')
-            .pauseFor(500).deleteAll()
-            .start()
-        }}
-      />
-    </Title>
+    <>
+      <Title>
+        Aprende React creando proyectos
+        <Typewriter
+          options={{
+            autoStart: true,
+            loop: true
+          }}
+          onInit={(typewriter) => {
+            typewriter
+              .typeString('<span class="text-1"> Divertidos </span>')
+              .pauseFor(500).deleteAll()
+              .typeString('<span class="text-2"> Increíbles </span>')
+              .pauseFor(500).deleteAll()
+              .typeString('<span class="text-3"> Reutilizase </span>')
+              .pauseFor(500).deleteAll()
+              .start()
+          }}
+        />
+      </Title>
+      <SubTitle>
+        React es cool 💙
+      </SubTitle>
+      <ButtonContainer>
+        <Button text='Explorar curso' />
+      </ButtonContainer>
+    </>
   )
 }
 
@@ -54,3 +63,37 @@ const Title = styled.h2`
       width: 90%;
     }
 `
+
+const SubTitle = styled.h3`
+  font-size: ${({theme}) => theme.fontlg};
+  text-transform: capitalize;
+  color: ${({theme}) => `rgba(${theme.textRgba}, .6)`};
+  font-weight : 600;
+  margin-bottom : 1rem;
+  width : 80%;
+  align-self : flex-start;
+
+  @media screen and (max-width: 40em){
+    font-size : ${({theme}) => theme.fontmd}
+  }
+  @media screen and (max-width: 48em) {
+    align-self : center;
+    text-align: center;
+  }
+`
+const ButtonContainer = styled.div`
+  width: 80%;
+  align-self: flex-start;
+
+  @media screen and (max-width: 48em){
+    align-self: center;
+    text-align: center;
+
+    button{
+      margin: 0 auto;
+    }
+
+  }
+  
+`
+
