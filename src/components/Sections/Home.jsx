@@ -1,8 +1,15 @@
 import styled from 'styled-components'
+import { TypeWriterText } from '../TypeWriter/TypeWriterText'
 
 export const Home = () => {
   return (
-    <Section id='home' > Section Home</Section>
+    <Section id='home' >
+      <Container>
+        <Box>
+          <TypeWriterText />
+        </Box>
+      </Container>
+    </Section>
   )
 }
 
@@ -12,4 +19,26 @@ const Section = styled.section`
     position: relative;
     background-color : ${({theme}) => theme.body};
 
+`
+
+const Container = styled.div`
+  width: 75%;
+  min-height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 64em) {
+    width: 85%;
+  }
+`
+
+const Box = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
