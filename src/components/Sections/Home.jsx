@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { TypeWriterText } from '../TypeWriter/TypeWriterText'
+import { CoverVideo } from '../CoverVideo/CoverVideo'
 
 export const Home = () => {
   return (
@@ -7,6 +8,9 @@ export const Home = () => {
       <Container>
         <Box>
           <TypeWriterText />
+        </Box>
+        <Box>
+          <CoverVideo />
         </Box>
       </Container>
     </Section>
