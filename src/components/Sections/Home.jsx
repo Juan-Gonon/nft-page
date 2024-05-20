@@ -36,6 +36,16 @@ const Container = styled.div`
   @media screen and (max-width: 64em) {
     width: 85%;
   }
+  @media screen and (max-width: 48em) {
+    flex-direction: column-reverse;
+    width: 100%;
+
+    &>*:first-child{
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+
 `
 
 const Box = styled.div`
