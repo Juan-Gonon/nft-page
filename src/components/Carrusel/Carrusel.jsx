@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Scrollbar, A11y, EffectCards } from 'swiper/modules'
+import { Navigation, Pagination, Scrollbar, A11y, EffectCards, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -18,8 +18,8 @@ export const Carrusel = () => {
   return (
     <Container>
       <Swiper
-        autoplay={{delay: 200, disableOnInteraction: false}}
-        modules={[Navigation, Pagination, Scrollbar, A11y, EffectCards]}
+        autoplay={{delay: 2000, disableOnInteraction: false}}
+        modules={[Navigation, Pagination, Scrollbar, A11y, EffectCards, Autoplay]}
         navigation
         pagination={{type: 'fraction'}}
         scrollbar={{ draggable: true }}
