@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import { TypeWriterText } from '../TypeWriter/TypeWriterText'
 import { CoverVideo } from '../CoverVideo/CoverVideo'
+import imgReact from '../../assets/react.png'
 
 export const Home = () => {
   return (
@@ -12,13 +13,16 @@ export const Home = () => {
         <Box>
           <CoverVideo />
         </Box>
+        <Round>
+          <img src={imgReact} alt='logoReact' width={500} height={400} />
+        </Round>
       </Container>
     </Section>
   )
 }
 
 const Section = styled.section`
-    min-height: ${({theme}) => `calc(100vh-${theme.navHeight})`};
+    min-height: ${({theme}) => `calc(100vh -${theme.navHeight})`};
     width : 100vw;
     position: relative;
     background-color : ${({theme}) => theme.body};
@@ -56,3 +60,35 @@ const Box = styled.div`
   align-items: center;
   justify-content: center;
 `
+
+const rotate = keyframes`
+  100%{
+    transform: rotate(1turn);
+  }
+`
+
+const Round = styled.div`
+  position: absolute;
+  bottom: 2rem;
+  right: 90%;
+  width: 7rem;
+
+  img{
+    width: 100%;
+    height: auto;
+    animation: ${rotate} 6s linear infinite reverse;
+  }
+
+  @media screen  and (max-width: 64em){
+    width: 4rem;
+    height: 4rem;
+    left: none;
+    right: 2rem;
+    bottom: 100%;
+  }
+
+  @media screen and (max-width: 48em){
+    right: 1.5rem;
+  }
+`
+
