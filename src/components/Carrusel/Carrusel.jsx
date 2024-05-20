@@ -4,7 +4,7 @@ import { Navigation, Pagination, Scrollbar, A11y, EffectCards } from 'swiper/mod
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
+import 'swiper/css/effect-cards'
 
 import img1 from '../../assets/nft/bighead.svg'
 import img2 from '../../assets/nft/bighead-1.svg'
