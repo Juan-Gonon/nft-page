@@ -42,6 +42,7 @@ const Container = styled.div`
 
     @media screen and (max-width: 70em){
         height: 60vh;
+        padding: 15px 0;
     }
     @media screen and (max-width: 64em) {
         height: 50vh;
