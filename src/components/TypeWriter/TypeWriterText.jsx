@@ -52,6 +52,11 @@ const Title = styled.h2`
       color: red;
     }
 
+    span{
+      text-transform: uppercase;
+      font-family:'Akaya Telivigala', cursive;
+    }
+
     @media screen and (max-width: 70em) {
       font-size: ${({theme}) => theme.fontxl};
     }
