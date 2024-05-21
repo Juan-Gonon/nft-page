@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { DrawSVG } from '../DrawSVG/DrawSVG'
 
 export const RoadMap = () => {
   return (
@@ -7,7 +8,9 @@ export const RoadMap = () => {
         RoadMap
       </Title>
       <Container>
-        <SvgContainer>Hola</SvgContainer>
+        <SvgContainer>
+          <DrawSVG />
+        </SvgContainer>
       </Container>
     </Section>
   )
