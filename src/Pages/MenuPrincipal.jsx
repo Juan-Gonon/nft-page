@@ -8,6 +8,7 @@ import { RoadMap } from '../components/Sections/RoadMap'
 import { ShowCases } from '../components/Sections/ShowCases'
 import { Team } from '../components/Sections/Team'
 import { Preguntas } from '../components/Sections/Preguntas'
+import { Footer } from '../components/Sections/Footer'
 
 export const MenuPrincipal = () => {
   return (
@@ -21,6 +22,7 @@ export const MenuPrincipal = () => {
         <ShowCases />
         <Team />
         <Preguntas />
+        <Footer />
       </ThemeProvider>
 
     </main>

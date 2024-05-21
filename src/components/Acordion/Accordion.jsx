@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 import { Minus } from '../../assets/Icons/Minus'
 import { Plus } from '../../assets/Icons/Plus'
