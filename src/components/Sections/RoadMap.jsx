@@ -3,7 +3,7 @@ import { DrawSVG } from '../DrawSVG/DrawSVG'
 
 export const RoadMap = () => {
   return (
-    <Section>
+    <Section id='roadmap'>
       <Title>
         RoadMap
       </Title>
@@ -12,6 +12,9 @@ export const RoadMap = () => {
           <DrawSVG />
         </SvgContainer>
         <Items>
+          <RoadMapItem subtitle='SubTitle' subText='SubText' />
+          <RoadMapItem subtitle='SubTitle' subText='SubText' />
+          <RoadMapItem subtitle='SubTitle' subText='SubText' />
           <RoadMapItem subtitle='SubTitle' subText='SubText' />
           <RoadMapItem subtitle='SubTitle' subText='SubText' />
         </Items>
@@ -76,11 +79,47 @@ const Items = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @media screen and (max-width: 48em) {
+  @media (max-width: 48em) {
     width: 90%;
   }
+  & > *:nth-of-type(2n + 1) {
+    justify-content: start;
+    @media (max-width: 48em) {
+      justify-content: center;
+    }
 
+    div {
+      border-radius: 50px 0 50px 0;
+      text-align: right;
+
+      @media (max-width: 48em) {
+        border-radius: 0 50px 0 50px;
+      text-align: left;
+        p {
+          border-radius: 0 40px 0 40px;
+
+        }
+      }
+    }
+    p {
+      border-radius: 40px 0 40px 0;
+    }
+  }
+  & > *:nth-of-type(2n) {
+    justify-content: end;
+    @media (max-width: 48em) {
+      justify-content: center;
+    }
+    div {
+      border-radius: 0 50px 0 50px;
+      text-align: left;
+
+      
+    }
+    p {
+      border-radius: 0 40px 0 40px;
+    }
+  }
 `
 
 /* ---------------- */
@@ -105,6 +144,7 @@ const RoadMapItem = ({subtitle, subText}) => {
 const Item = styled.li`
   width: 100%;
   height: 100%;
+  display: flex;
 
   @media screen and (max-width: 48em) {
     justify-content: flex-end !important;
