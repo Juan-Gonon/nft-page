@@ -40,6 +40,13 @@ export const Footer = () => {
           <Item onClick={() => scrollTo('preguntas')}>Preguntas</Item>
         </MenuItems>
       </Container>
+      <Bottom >
+        <span> © {new Date().getFullYear()} </span>
+        <span>
+          React 🖤
+          <a href='#'>Juan Gonon</a>
+        </span>
+      </Bottom>
     </Section>
   )
 }
