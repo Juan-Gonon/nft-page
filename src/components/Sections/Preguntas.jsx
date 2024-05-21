@@ -1,11 +1,16 @@
 import styled from 'styled-components'
+import { Accordion } from '../Acordion/Accordion'
 
 export const Preguntas = () => {
   return (
     <Section id='preguntas'>
       <Title>Preguntas</Title>
       <Container>
-        <Box />
+        <Box>
+          <Accordion title='¿Olvidaste tu contraseña?'>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </Accordion>
+        </Box>
       </Container>
     </Section>
   )
