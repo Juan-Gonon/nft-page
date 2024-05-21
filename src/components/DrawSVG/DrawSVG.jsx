@@ -1,9 +1,13 @@
 import styled, {keyframes} from 'styled-components'
+import { Vector } from '../../assets/Icons/Vector'
 
 export const DrawSVG = () => {
   return (
     <>
       <Ball />
+      <VectorContainer>
+        <Vector />
+      </VectorContainer>
     </>
   )
 }
@@ -30,5 +34,21 @@ const Ball = styled.div`
 
     @media screen and (max-width: 48em) {
         left: 1rem;
+    }
+`
+
+const VectorContainer = styled.div`
+    position: absolute;
+    top: .5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    svg{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
     }
 `
