@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { Minus } from '../../assets/Icons/Minus'
+import { Plus } from '../../assets/Icons/Plus'
 
 export const Accordion = ({title, children, ScrollTrigger}) => {
   const [collapse, setCollapse] = useState(false)
@@ -14,6 +16,16 @@ export const Accordion = ({title, children, ScrollTrigger}) => {
         <Name>
           <span>{title}</span>
         </Name>
+        {
+          collapse
+            ? <Indicator>
+              <Minus />
+            </Indicator>
+            : <Indicator>
+              <Plus />
+            </Indicator>
+        }
+
       </Title>
       <Reveal clicked={collapse} >
         {children}
@@ -66,21 +78,21 @@ const Name = styled.div`
 display: flex;
 align-items: center;
 `
-// const Indicator = styled.span`
-// font-size: ${props => props.theme.fontxxl};
+const Indicator = styled.span`
+font-size: ${props => props.theme.fontxxl};
 
-// display: flex;
-// justify-content: center;
-// align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
 
-// svg{
-//     width: 1rem;
-//     height: auto;
-//     fill: ${props => props.theme.carouselColor};
-// }
+svg{
+    width: 1rem;
+    height: auto;
+    fill: ${props => props.theme.carouselColor};
+}
 
-// @media (max-width: 48em){
-//     font-size: ${props => props.theme.fontxl};
+@media (max-width: 48em){
+    font-size: ${props => props.theme.fontxl};
 
-// }
-// `
+}
+`

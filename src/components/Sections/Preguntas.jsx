@@ -10,6 +10,23 @@ export const Preguntas = () => {
           <Accordion title='¿Olvidaste tu contraseña?'>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           </Accordion>
+          <Accordion title='¿Donde se aceptan tarjetas ?'>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </Accordion>
+          <Accordion title='¿Cuando cumples año?'>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </Accordion>
+        </Box>
+        <Box>
+          <Accordion title='¿Olvidaste tu contraseña?'>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </Accordion>
+          <Accordion title='¿Donde se aceptan tarjetas ?'>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </Accordion>
+          <Accordion title='¿Cuando cumples año?'>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </Accordion>
         </Box>
       </Container>
     </Section>
