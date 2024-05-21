@@ -37,6 +37,9 @@ export const Navigation = () => {
           <MenuItem onClick={() => scrollTo('team')} >
             Team
           </MenuItem>
+          <MenuItem onClick={() => scrollTo('preguntas')} >
+            Preguntas
+          </MenuItem>
         </Menu>
       </NabBar>
     </Section>

@@ -7,6 +7,7 @@ import { About } from '../components/Sections/About'
 import { RoadMap } from '../components/Sections/RoadMap'
 import { ShowCases } from '../components/Sections/ShowCases'
 import { Team } from '../components/Sections/Team'
+import { Preguntas } from '../components/Sections/Preguntas'
 
 export const MenuPrincipal = () => {
   return (
@@ -19,6 +20,7 @@ export const MenuPrincipal = () => {
         <RoadMap />
         <ShowCases />
         <Team />
+        <Preguntas />
       </ThemeProvider>
 
     </main>
