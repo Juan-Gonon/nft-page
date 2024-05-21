@@ -42,6 +42,11 @@ export const ShowCases = () => {
         <NftItem img={img2} number={447} price={1.6} />
         <NftItem img={img3} number={647} price={1.9} />
       </Row>
+      <Row direction='reverse'>
+        <NftItem img={img1} number={847} price={1.5} />
+        <NftItem img={img2} number={447} price={1.6} />
+        <NftItem img={img3} number={647} price={1.9} />
+      </Row>
     </Section>
   )
 }
