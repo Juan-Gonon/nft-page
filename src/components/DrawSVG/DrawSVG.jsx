@@ -15,7 +15,6 @@ export const DrawSVG = () => {
     let svg = document.getElementsByClassName('svg-path')[0]
 
     const length = svg.getTotalLength()
-    console.log(length)
     // comienza a posicionar el dibujo svg
     svg.style.strokeDasharray = length
 
