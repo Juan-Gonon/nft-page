@@ -9,6 +9,7 @@ import { ShowCases } from '../components/Sections/ShowCases'
 import { Team } from '../components/Sections/Team'
 import { Preguntas } from '../components/Sections/Preguntas'
 import { Footer } from '../components/Sections/Footer'
+import { ScrollToTop } from '../components/ScrollToTop/ScrollToTop'
 
 export const MenuPrincipal = () => {
   return (
@@ -23,6 +24,7 @@ export const MenuPrincipal = () => {
         <Team />
         <Preguntas />
         <Footer />
+        <ScrollToTop />
       </ThemeProvider>
 
     </main>
