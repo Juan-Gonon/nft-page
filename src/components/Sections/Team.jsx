@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { MyConfetti } from '../confetti/Confetti'
 import img1 from '../../assets/nft/bighead.svg'
 import img2 from '../../assets/nft/bighead-1.svg'
 import img3 from '../../assets/nft/bighead-2.svg'
@@ -8,13 +9,10 @@ import img6 from '../../assets/nft/bighead-5.svg'
 import img7 from '../../assets/nft/bighead-6.svg'
 import img8 from '../../assets/nft/bighead-7.svg'
 import img9 from '../../assets/nft/bighead-8.svg'
-import img10 from '../../assets/nft/bighead-9.svg'
-import img11 from '../../assets/nft/bighead-10.svg'
-import ETH from '../../assets/icons8-ethereum-48.png'
 
 const MemberComponent = ({img, name = '', position = ''}) => {
   return (
-    <Item>
+    <Item id='team'>
       <ImageContainer>
         <img src={img} width={500} height={400} alt='img' />
       </ImageContainer>
@@ -27,6 +25,7 @@ const MemberComponent = ({img, name = '', position = ''}) => {
 export const Team = () => {
   return (
     <Section>
+      <MyConfetti />
       <Title>
         Team
       </Title>
