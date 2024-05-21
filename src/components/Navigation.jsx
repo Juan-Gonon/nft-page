@@ -31,6 +31,9 @@ export const Navigation = () => {
           <MenuItem onClick={() => scrollTo('roadmap')} >
             RoadMap
           </MenuItem>
+          <MenuItem onClick={() => scrollTo('cards')} >
+            Cards
+          </MenuItem>
         </Menu>
       </NabBar>
     </Section>
