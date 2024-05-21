@@ -3,6 +3,7 @@ import { Logo } from '../Logo'
 import Instagram from '../../assets/Icons/Instagram'
 import Twitter from '../../assets/Icons/Twiter'
 import Facebook from '../../assets/Icons/Facebook'
+import { Banner } from '../Banner/Banner'
 
 export const Footer = () => {
   const scrollTo = (id) => {
@@ -16,6 +17,7 @@ export const Footer = () => {
 
   return (
     <Section>
+      <Banner />
       <Container>
         <Left>
           <Logo />
