@@ -9,9 +9,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/akaya-telivigala": "^5.0.13",
+    "@fontsource/sora": "^5.0.18",
+    "@gsap/react": "^2.1.1",
+    "@react-hook/window-size": "^3.1.1",
     "react": "^18.2.0",
+    "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "react-use": "^17.5.0",
+    "styled-components": "^6.1.11",
+    "swiper": "^11.1.3",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
