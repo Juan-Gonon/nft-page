@@ -1,14 +1,22 @@
 import styled, {ThemeProvider} from 'styled-components'
-import { Carrusel } from '../Carrusel/Carrusel'
+// import { Carrusel } from '../Carrusel/Carrusel'
 import { Button } from '../Buttons/Button'
 import { Dark } from '../../Styles/Thems'
+import { lazy, Suspense } from 'react'
+
+const Carrusel = lazy(() => import('../Carrusel/Carrusel'))
+
 
 export const About = () => {
   return (
     <Section id='about' >
+
       <Container>
         <Box>
+          <Suspense>
+
           <Carrusel />
+          </Suspense>
         </Box>
         <Box>
           <Title>

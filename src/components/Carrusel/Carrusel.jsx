@@ -14,7 +14,7 @@ import img5 from '../../assets/nft/bighead-4.svg'
 import img6 from '../../assets/nft/bighead-5.svg'
 import arrow from '../../assets/Arrow.svg'
 
-export const Carrusel = () => {
+const Carrusel = () => {
   return (
     <Container>
       <Swiper
@@ -119,3 +119,5 @@ const Container = styled.div`
       }
     }
 `
+
+export default Carrusel
