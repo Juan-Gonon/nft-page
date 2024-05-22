@@ -3,7 +3,7 @@ import styled, {ThemeProvider} from 'styled-components'
 import { Button } from '../Buttons/Button'
 import { Dark } from '../../Styles/Thems'
 import { lazy, Suspense } from 'react'
-
+import { Loading } from '../Loading/Loading'
 const Carrusel = lazy(() => import('../Carrusel/Carrusel'))
 
 
@@ -13,7 +13,7 @@ export const About = () => {
 
       <Container>
         <Box>
-          <Suspense>
+          <Suspense fallback={<Loading />} >
 
           <Carrusel />
           </Suspense>
