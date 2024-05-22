@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import GIF from '../../assets/Home Video.mp4'
 
-export const CoverVideo = () => {
+const CoverVideo = () => {
   return (
     <VideoContainer>
       <video src={GIF} type='video/mp4' autoPlay muted loop />
@@ -21,3 +21,5 @@ const VideoContainer = styled.div`
         }
     }
 `
+
+export default CoverVideo

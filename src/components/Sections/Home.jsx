@@ -1,8 +1,8 @@
 import styled, {keyframes} from 'styled-components'
-import { CoverVideo } from '../CoverVideo/CoverVideo'
 import imgReact from '../../assets/react.png'
 import { lazy, Suspense } from 'react'
 const TypeWriterText = lazy(() => import('../TypeWriter/TypeWriterText'))
+const CoverVideo = lazy(() => import('../CoverVideo/CoverVideo'))
 import { Loading } from '../Loading/Loading'
 
 export const Home = () => {
@@ -15,7 +15,9 @@ export const Home = () => {
           </Suspense>
         </Box>
         <Box>
+        <Suspense fallback={<Loading />} >
           <CoverVideo />
+        </Suspense>
         </Box>
         <Round>
           <img src={imgReact} alt='logoReact' width={500} height={400} />
