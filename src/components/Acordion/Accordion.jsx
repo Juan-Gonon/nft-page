@@ -27,7 +27,7 @@ export const Accordion = ({title, children, ScrollTrigger}) => {
         }
 
       </Title>
-      <Reveal clicked={collapse} >
+      <Reveal $clicked={collapse} >
         {children}
       </Reveal>
     </Container>
@@ -61,7 +61,7 @@ align-items: center;
 }
 `
 const Reveal = styled.div`
-display: ${props => props.clicked ? 'inline-block' : 'none'};
+display: ${props => props.$clicked ? 'inline-block' : 'none'};
 margin-top: 1rem;
 color: ${props => `rgba(${props.theme.bodyRgba}, 0.6)`};
 font-size: ${props => props.theme.fontmd};
