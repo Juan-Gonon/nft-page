@@ -1,14 +1,18 @@
 import styled, {keyframes} from 'styled-components'
-import { TypeWriterText } from '../TypeWriter/TypeWriterText'
 import { CoverVideo } from '../CoverVideo/CoverVideo'
 import imgReact from '../../assets/react.png'
+import { lazy, Suspense } from 'react'
+const TypeWriterText = lazy(() => import('../TypeWriter/TypeWriterText'))
+import { Loading } from '../Loading/Loading'
 
 export const Home = () => {
   return (
     <Section id='home' >
       <Container>
         <Box>
+          <Suspense fallback={<Loading />} >
           <TypeWriterText />
+          </Suspense>
         </Box>
         <Box>
           <CoverVideo />

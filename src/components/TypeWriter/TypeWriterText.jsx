@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Typewriter from 'typewriter-effect'
 import { Button } from '../Buttons/Button'
 
-export const TypeWriterText = () => {
+const TypeWriterText = () => {
   return (
     <>
       <Title>
@@ -102,3 +102,4 @@ const ButtonContainer = styled.div`
   
 `
 
+export default TypeWriterText
